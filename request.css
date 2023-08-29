@@ -1,0 +1,258 @@
+:root {
+    --primary-color: rgb(11, 78, 179);
+	--anotha: #000000;	
+  }
+  
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-image: url(images/bg9.jpg);
+  }
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 30px 10%;
+    box-sizing: border-box;
+    background: #77797c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+li, a, button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav{
+    list-style: none;
+    z-index: 1;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: space-evenly;    
+}
+
+nav ul li{
+   display: inline-block;
+   text-align: center;
+}
+
+nav ul li a{
+    margin: 1px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: all ease 0.3s ease 0;
+}
+
+nav ul li a:hover{
+    border-radius: 10px;
+    padding: auto;
+    color: #9615db;
+    background: #d2d3d3;
+}
+
+.logo i{
+    height: 50px;
+    min-width: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.logo i:hover{
+    background-color: #d2d3d3;
+    color: #9615db;
+    border-radius: 10px;
+}
+
+.admin button{
+    padding: 9px 25px;
+    background-color: #555759;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all ease 0.3s ease 0;
+}
+.admin button:hover{
+    box-shadow: 0 0 0 2px #d2d3d3, 0 0 0 3px var(--anotha);
+}
+  
+  .width-50 {
+    width: 50%;
+  }
+  
+  .ml-auto {
+    margin-left: auto;
+  }
+  
+  .text-center {
+    text-align: center;
+    margin-bottom: 0%;
+  }
+
+  .progressbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 2rem 0 4rem;
+  }
+  
+  .progressbar::before,
+  .progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #dcdcdc;
+    z-index: -1;
+  }
+  
+  .progress {
+    background-color: #8C31EB;
+    width: 0%;
+    transition: 0.3s;
+  }
+  
+  .progress-step {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+  }
+  
+  .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .progress-step-active {
+    background-color: #8C31EB;
+    color: #f3f3f3;
+  }
+  
+  .form {
+    width: 60%;
+    margin: 0 auto;
+    border: 5px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 1.5rem;
+    padding-top: 2px;
+    margin-top: 25px;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    z-index: 0;
+  }
+  
+  .form-step {
+    display: none;
+    transform-origin: top;
+    animation: animate 0.5s;
+  }
+  
+  .form-step-active {
+    display: block;
+  }
+  
+  .input-group {
+    margin: 2rem 0;
+  }
+
+  .input-group-r {
+    margin: 2rem 0;
+  }
+  
+  .btns{
+    margin-top: 10px;
+    display:flex;
+
+  }
+  
+  .btns button{
+    background-color: lightgray;
+    margin-right: 20px;
+    border-radius: .25rem;
+    color: black;
+  }
+
+  .btns-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: #8C31EB;
+    color: #f3f3f3;
+    text-align: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+	  
+  }
+  .btn:hover {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+  }
+
+
+.form-control{
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 5px;
+    height: 40px;
+    width: 970px;
+    opacity: 1;
+    color: rgb(0, 0, 0);
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+
